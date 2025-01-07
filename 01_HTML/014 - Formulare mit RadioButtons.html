@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<head>  
+    <meta charset="utf-8">
+    <title>Formulare</title>
+</head>
+<body>
+
+    <!-- Es gibt noch weitere Eingabetypen. Z.B. Radio, welcher die Verwendung von Radiobuttons ermöglicht.
+        Hierbei kann immer nur einer der Buttons aktiv (checked) sein.
+    -->
+
+    <h2>HTML Formulare</h2>
+
+    <form>
+            <input type="radio" name="geschlecht" value="maennlich" checked> maennlich<br>
+            <input type="radio" name="geschlecht" value="weiblich"> weiblich<br>
+            <input type="radio" name="geschlecht" value="andere"> andere
+          </form>
+    
+    <br>
+
+    <!-- Wenn man noch einen schönen Rahmen um das Formular machen möchte, kann man z.B. ein fieldset verwenden.-->
+
+    <form>
+        <fieldset>
+            <legend> Mein Geschlecht ist: </legend>
+            <input type="radio" name="geschlecht" value="maennlich" checked> maennlich<br>
+            <input type="radio" name="geschlecht" value="weiblich"> weiblich<br>
+            <input type="radio" name="geschlecht" value="andere"> andere
+        </fieldset>
+        
+    </form>
+
+</body>
+</html>

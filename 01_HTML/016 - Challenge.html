@@ -1,0 +1,51 @@
+<!-- Erstelle ein HTML Dokument welches folgende 
+    Anforderungen erfüllt:
+        - Es besitz ein Formular welches den Namen, 
+        das Alter und die Emailadresse abfragt.
+        - Der Submit/Absendebutton soll die Aktion 
+        "anmelden.php" haben.
+        - Es besitzt ein Formular bei dem man seine
+        bevorzugte Reiseoption eintragen kann 
+        (z.B. Auto, Flug, Zug, Schiff)
+        - Der Name soll auf 15 Zeichen 
+        limitiert sein und einen Platzhalter haben.
+        - Das Alter darf nur Werte von 12 bis 120 haben.
+        - Die Email sollte autocomplete auf "aus" 
+        haben und mindestens 8 Zeichen.
+        -->
+
+
+
+<!DOCTYPE html>
+<html lang="de-de" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Übung 3</title>
+    </head>
+    <body>
+
+        <!-- Submit acttion ( übergabe der Daten) -->
+       <form action="anmelden.php">
+        <!-- Formular zum Abfragen von Name, Alter, E-Mail-->
+
+        <!-- Name auf 15 Zeichen limitiert, sowie platzhalter -->
+           Name: <input type="text" name="name" autocomplete="on" max="15" placeholder="Dein Name..">
+
+           <!-- Das Alter darf nur Werte von 12 bis 120 haben. -->
+           Alter: <input type="number" name="alter" min="12" max="120">
+
+           <!-- Die Email sollte autocomplete auf "aus"  -->
+           E-Mail: <input type="email" name="email" minlength="8" autocomplete="off">
+            <input type="submit">
+        </form>
+
+        <!-- Es besitzt ein Formular bei dem man seine bevorzugte Reiseoption eintragen  -->
+        <form>
+            Wie reisen Sie gerne? <br>
+            <input type="radio" name="reisen" value="auto">Mit dem Auto <br>
+            <input type="radio" name="reisen" value="flug">Mit dem Flugzeug <br>
+            <input type="radio" name="reisen" value="zug">Mit dem Zug <br>
+            <input type="radio" name="reisen" value="schiff">Mit dem Schiff <br>
+        </form>
+    </body>
+</html>

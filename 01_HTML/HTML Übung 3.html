@@ -1,0 +1,32 @@
+
+        <!-- Erstelle ein HTML Dokument welches folgende Anforderungen erfüllt:
+        - Es besitz ein Formular welches den Namen, das Alter und die Emailadresse abfragt.
+        - Der Submit/Absendebutton soll die Aktion "anmelden.php" haben.
+        - Es besitzt ein Formular bei dem man seine bevorzugte Reiseoption eintragen kann (z.B. Auto, Flug, Zug, Schiff)
+        - Der Name soll auf 15 Zeichen limitiert sein und einen Platzhalter haben.
+        - Das Alter darf nur Werte von 12 bis 120 haben.
+        - Die Email sollte autocomplete auf "aus" haben und mindestens 8 Zeichen.
+        -->
+
+<!DOCTYPE html>
+<html>
+<head>  
+    <meta charset="utf-8">
+    <title>Formulare</title>
+</head>
+
+<body>
+    
+    <!-- Aktion "anmelden.php" -->
+	<form action="anmelden.php">
+        <!-- ein Formular welches den Namen, das Alter und die Emailadresse abfragt -->
+        <!-- Der Name soll auf 15 Zeichen limitiert sein und einen Platzhalter haben. -->
+        Name: <input type="text" name="name" placeholder="Dein Name hier" autocomplete="on" max="15">
+        <!-- Das Alter darf nur Werte von 12 bis 120 haben. -->
+        Alter: <input type="number" name="alter" min="12" max="120">
+        <!-- Die Email sollte autocomplete auf "aus" haben und mindestens 8 Zeichen. -->
+        Email: <input type="email" name="email" minlength="8" autocomplete="off">
+        <input type="submit">
+        </form>
+</body>
+</html>

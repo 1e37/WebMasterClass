@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulare</title>
+</head>
+
+<body>
+
+    <!-- Um Formulare anzulegen, benötigst du das "form" Tag. Darin beinden sich dann die einzelnen Eingaben (Input). 
+        Diese Inputfelder haben jede Menge verschiedener Attribute. 
+
+        type: der Typ des Feldes, wie z.B. eine Texteingabe (text), ein Passwort (password) oder auch ein AbsendeButton (submit).
+        name: der name des Feldes. Dieser kann später verwendet werden, um z.B. den Eingegeben Wert (value) mit Einträgen in der Datenbank abzugleichen.
+        value: der Wert den wir standardmäßig festlegen, der aber vom Nutzer überschriebenwerden kann.
+    -->
+
+    <h2>HTML Formulare</h2>
+
+    <form action="/login.php">
+        Benutzername:<br>
+        <input type="text" name="username" value="Taube123">
+        <br>
+        Passwort:<br>
+        <input type="password" name="password" value="password123">
+        <br><br>
+        <input type="submit" value="Einloggen">
+    </form>
+
+    <p>Wenn du auf die Schaltfläche "Einloggen" klickst, werden die Formulardaten an eine Seite namens "/login.php"
+        gesendet.</p>
+</body>
+
+</html>

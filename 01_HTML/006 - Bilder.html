@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bilder</title>
+</head>
+<body>
+    <!-- Ein Bild kann von einer externen Seite oder aber vom Webserver selbst kommen.-->
+    <!-- das "alt" Attribut steht für Alternative. Wenn das Bild also nicht angezeigt werden kann, wird der Text der "alt" zugewiesen ist, dargestellt. -->
+    <!-- src steht für source - also die Quelle, sprich, win welchem Pfad befindet sich das Bild. -->
+    <!-- bei src und alt handelt es sich um sogenannte Attribute-->
+    <img src="https://cdn.pixabay.com/photo/2015/09/05/20/07/log-924958_960_720.jpg" alt="Huette bewoelkt">
+
+    <!-- dieser Link ist gewollt inkorrekt-->
+    <img src="ttps://cdn.pixabay.com/photo/2015/09/05/20/07/log-924958_960_720.jpg" alt="Huette bewoelkt">
+
+    <img src="wueste.jpg" alt="Wueste">
+    <!-- man kann die größe der Bilder auch direkt im Browser verändern. Es ist jedoch aus SEO und Gründen der Geschwindigkeit der Webseite
+        zu empfehlen unbedingt die Bilder auf die richtige Größte zu skalieren und komprimieren, bevor man sie auf der Webseite verwendet.
+        Jedes KiloByte zählt ;)
+    -->
+    <!-- Mit "width" kann man die Breite und mit height die Höhe, in Pixeln, setzen-->
+    <img src="wueste.jpg" alt="Wueste" width="300" height="200">
+    <!-- es können jedoch auch relative Werte verwendet werden. 100% setzt die Breite z.B. auf 100% der Breites des Bildschirms auf der die Seite dargestellt wird.
+        Dabei kann das Bild unscharf werden, da es u.U. gezogen wird.
+    -->
+
+    <!-- Dynamisches Rendering in % -->
+    <img src="wueste.jpg" alt="Wueste" width="100%" height="100%">
+</body>
+</html>
