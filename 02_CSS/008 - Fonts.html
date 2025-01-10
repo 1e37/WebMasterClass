@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Fonts - Schriftart Stylen</title>
+   
+    <!-- die besten Web Fonts die auch noch sicher sind 
+         https://websitesetup.org/web-safe-fonts-html-css/
+    -->
+    <style>
+        /* Hierbei versuchen wir Times New Roman zu verwenden
+            falls diese Schriftart nicht erkannt wird, soll Times verwendet werden.
+            Falls Times nicht erkannt wird die absolute Grundstufe der serifen/geschweiften Schriftarten: Serif
+        */
+        p {
+            font-family: "Times New Roman", Times, serif;
+            /* font-size: 30px; */
+            font-size: 2.5em; /* em wird von vielen Entwicklern empfohlen 
+                em ergibt sich aus px/16 also 2.5em entspricht 40px.
+            */
+            /* font-size: 200%; */
+
+            /* font-size: 5vw;  */
+            /*
+            1vw entspricht 1% des viewports, also der sichtbaren Größe.
+            wenn der Nutzer also einen 50cm Bildschirm hat, ist 1vw = 0.5cm.
+            */
+
+            font-weight: normal;
+            font-weight: bold; /* fett gedruckt */
+            
+            font-variant: small-caps; /* setzt den Text auf Die Eigenschaft font-variant gibt an, 
+            ob ein Text in einer Kleinbuchstabenschrift angezeigt werden soll oder nicht.
+            Bei einer Kleinbuchstabenschrift werden alle Kleinbuchstaben in Großbuchstaben umgewandelt. 
+            Die konvertierten Großbuchstaben erscheinen jedoch in einer kleineren 
+            Schriftgröße als die ursprünglichen Großbuchstaben im Text.
+            */
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>Fonts stylen</h1>
+
+    <p>Absatz unter dem Link Container </p>
+        
+    
+</body>
+</html>
+

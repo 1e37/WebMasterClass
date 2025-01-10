@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Position</title>
+
+    <!-- HTML-Elemente werden standardmäßig statisch positioniert.
+    Statisch positionierte Elemente werden von den Eigenschaften oben, unten, links und rechts nicht beeinflusst.
+    Ein Element mit position: static; wird nicht speziell positioniert; es wird immer entsprechend dem normalen Seitenfluss positioniert.
+
+    Ein Element mit position: relative; wird relativ zu seiner normalen Position positioniert.
+    Das Einstellen der oberen, rechten, unteren und linken Eigenschaften eines relativ positionierten Elements bewirkt, 
+    dass es von seiner normalen Position weg eingestellt wird. Andere Inhalte werden so angepasst, 
+    dass sie in eine vom Element hinterlassene Lücke passen.
+
+    Ein Element mit position: fixed; ist relativ zum Ansichtsfenster positioniert, d.h. es bleibt immer an der gleichen Stelle, 
+    auch wenn die Seite gescrollt wird. Die Eigenschaften oben, rechts, unten und links werden zur Positionierung des Elements verwendet.
+    Ein fixiertes Element hinterlässt keine Lücke auf der Seite, auf der es sich normalerweise befinden würde.
+
+    -->
+
+    <style>
+        .container {
+            position: relative;
+        }
+
+        .obenlinks {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 22px;
+        }
+        .mitte {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            font-size: 22px;
+            background-color: aqua;
+        }
+        img { 
+            width: 100%;
+            height: auto;
+            opacity: 0.3;
+        }
+        .sticky {
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 0;
+            background-color: brown;
+            border: 2px solid red;
+            text-align: center;
+        }
+
+        .fixed{
+            position: fixed;
+            left: 50px;
+            top: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+         
+    <h2>Position</h2>
+    <div class="sticky">Ich klebe</div>   
+    <div class="fixed">Fixiert</div>
+    <p>Add some text to an image in the top left corner:</p>
+    
+    <div class="container">
+        
+        <img src="https://cdn.pixabay.com/photo/2018/01/04/11/38/spider-web-3060448_1280.jpg">
+        <div class="obenlinks">Oben links</div>
+        <div class="mitte">MITTE</div>
+       
+    </div>
+</body>
+</html>
+            
+

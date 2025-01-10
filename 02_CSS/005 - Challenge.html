@@ -1,0 +1,52 @@
+ <!-- Erstelle ein HTML Dokument, welches folgenen 
+    Anforderungen erfüllt:
+        - Es besitzt einen HTML und einen CSS Kommentar 
+        mit beliebigem Inhalt
+        - Es verwendet Inline CSS welches einer 
+        Überschrift diese Farbe zuweist: #8dbdd8
+        - Es verwendet Internes CSS 
+        (style Tag im head), welches alle Texte
+         von Paragraphen weiß macht.
+        - Es besitzt ein Div welches einen 
+        schwarzen Hintergrund besitzt und 300px 
+        breit und hoch ist.
+        - Dieses Div besitzt einen Absatz mit 
+        Loremipsum text.
+    -->
+
+
+<!DOCTYPE html>
+<html lang="de-de" >
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Übung 1</title>
+
+        <style>
+            /* Internes CSS  */
+            p{
+                color: white;
+            }
+
+            div{
+                background-color: black;
+                width: 300px;
+                height: 300px;
+                margin: 10px;
+            }
+    
+            
+        </style>
+
+    </head>
+
+    <body>
+        <h1 style="color:#8dbdd8;">Inline CSS Überschrift</h1>
+        <!-- alle Texte von Paragraphen weiß macht. -->
+
+        <div>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div></div>
+        <div></div>
+    </body>
+</html>

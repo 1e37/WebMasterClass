@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Farbenlehre</title>
+    
+    <!-- Man kann in Browsern jede Menge Farben Darstellen. Um dies zu tun verwenden wir den Hex Wert oder den namen der Farbe (für Standardfarben). 
+        Beim Hex Wert handelt es sich um einen Hexadezimalwert, welcher darüber Auskunft gibt, wie viel Rot, Grün und Blau in der Farbe sein soll.
+        Rot wäre z.B. #FF0000
+        Grün wäre z.B. #00FF00
+        Blau wäre z.B. #0000FF
+        Hexadezimal ist ein Zahlensystem mit 16 Ziffern. Also 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F.
+        Dabei steht FF für 15 15 weil Computer jedoch bei 0 beginnen zu zählen, entspricht dies 16 16. Wenn man das multipliziert, kommt man auf 256. Da aber wie gesagt Computer bei 0 beginnen und nicht bei 1, ist der Wert 255.
+        Es gibt also 256 Werte für den Rot, Grün und Gelbwert einer Farbe. 
+        
+        Damit lassen sich 16.777.216 verschiedene Farben darstellen.
+    -->
+    <style>
+        
+        div{
+            background-color:blueviolet;
+            margin: 30px;
+            width: 200px;
+            height: 200px;
+        }
+        /* Hier kannst du Farben auswählen und erhältst sowohl den RGB als auch den Hex und HSL Wert. */
+        /* HSL steht für HUE, Saturation, Lighting und ist eine andere Art und Weise Farben darzustellen. 
+            Hierbei ist der erste Wert eine absolute Zahl und die weiteren beiden Werte relative Zahlen.
+        */
+        p{
+            color:#15DA32;
+            color:rgb(255, 87, 51);
+            color: hsl(25, 33%, 66%);
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Div Container</h1>
+    <div>
+    </div>
+    <div>
+        Hier können aber auch Inhalte rein.
+        <br>
+        sogar Formulare
+        <br>
+        <form>
+            <input type="text" value="name"/>
+            <input type="submit"/>
+        </form>
+    </div>
+    <p>
+        Absatz unter dem Div Container
+    </p>
+</body>
+</html>
+

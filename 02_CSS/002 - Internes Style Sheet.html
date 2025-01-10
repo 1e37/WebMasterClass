@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Seitentitel</title>
+    <!-- Das interne Style Sheet erstellt man im head Tag, in dem man das "style" Tag verwendet. Darin definiert man dann sein CSS. 
+        Also seine Regeln, wie die einzelnen Elemente der Webseite aussehen sollen.
+        Hier verändern wir z.B. das Aussehen aller p Tags.
+        Hierbei verändern wir die Farbe zu einem violett, den Abstand (margin) in alle richtungen auf 30 Pixel.
+
+        Hierbei ist es wichtig, dass jede Veränderung einer Eigenschaft mit einem Semikolon (;) abgeschlossen wird und sich die Änderungen innerhalb der 
+        geschweiften Klammern des p Styles befinden. 
+
+        Grundsätzlich ist die Struktur:
+        NameDesTags{
+            Eigenschaft1: Wert1;
+            Eigenschaft2: Wert2;
+        }
+    -->
+    <style>
+        p {
+            color: blueviolet;
+            /* Abstand nach außen */
+            margin: 30px;
+            /* font-size: 20px; */
+            
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Inline CSS: ( individuelle überschreibung) -->
+    <h1 style="color:red;margin-left:20px;">H1 Überschrift</h1>
+
+    <!-- und so mit Internal CSS in diesem -->
+    <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+        takimata sanctus est Lorem ipsum dolor sit amet. </p>
+
+    <p>Absatz 2 - Auch von den neuen CSS Regeln betroffen.</p>
+
+
+</body>
+
+</html>

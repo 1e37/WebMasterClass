@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Challenge Tabellen</title>
+
+    <!-- Erstelle ein HTML Dokument welches folgende Anforderungen erfüllt:
+        - Es werden zwei Tabellen angezeigt. Die Tabelle der Gruppe A der Fußball WM 2018 und die Tabelle der Gruppe B der WM 2018.
+        - Dabei wird der Platz, die Manschaft, Das Torverhältnis und die Punkte als Spalten dargestellt.
+        - Der Hintergrund der Kopfzeile ist in einem leichten Grün und hat weißen Text. Der Rest des Textes ist schwarz auf weißem Grund.
+        - Die aufeinanderfolgenden Zeilen haben unterschiedliche Hintergrundfarben (z.B. Platz 1 grau, Platz 2 weiß, Platz 3 grau.)
+        - Tabellen nehmen die gesamte Breite ein und haben einen gewissen Abstand zu einander.
+        - Der Text ist links angeordnet.
+        - Die Teamnamen sollen Fett dargestellt werden
+        - Saudi-Arabien wird auf zwei Zeilen dargestellt- Also 
+        Saudi-
+        Arabien
+    -->
+
+    <style>
+            
+            table {
+                /* Damit sorgen wir dafür, dass die Rahmen der aneinanderstehenden Zellen zusammengeführt werden soll */
+                border-collapse: collapse;
+                /* Die Tabelle soll über die gesamte Breite gehen */
+                width: 100%;
+            }
+            
+            
+            th, td {
+                
+                text-align: left; /* sorgt dafür, dass der Text sich nach links orientiert */
+                padding: 15px;
+            }
+            /* Was passiert hier?
+                Wir verwenden hier ein Konzept der erweiterten Selektoren. Und zwar sagen wir:
+                Für Table Rows (Tabellen Reihen), möchten wir für das n-te Kindelement (welches eine gerade Zahl ist) den folgenden style: leichtes grau.
+            */
+            tr:nth-child(even){
+                background-color: #f2f2f2
+            }
+            
+            th {
+                background-color: lightgreen;
+                color: white;
+            }
+
+            .team{
+                 font-weight: bold;   
+            }
+
+            </style>
+            
+</head>
+<body>
+    <div>
+    <h1>2024 - Vorrunde</h1>
+
+    <!-- Tabelle1 -->
+    <table>
+        <!-- Table Row -->
+        <tr>
+            <!-- Table Header -->
+            <th>Platz</th>
+            <th>Mannschaft</th>
+            <th>Torverhältnis</th>
+            <th>Punkte</th>
+        </tr>
+        <tr>
+            <!-- Table Data -->
+            <td>1</td>
+            <td class="team">Uruguay</td>
+            <td>5:0</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <!-- Table Data -->
+            <td>2</td>
+            <td class="team">Russland</td>
+            <td>8:4</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <!-- Table Data -->
+            <td>3</td>
+            <td class="team">Saudi-<br>Arabien</td>
+            <td>2:7</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <!-- Table Data -->
+            <td>4</td>
+            <td class="team">Ägypten</td>
+            <td>2:6</td>
+            <td>0</td>
+        </tr>
+    </table>
+    <br>
+
+    <!-- Tabelle2 -->
+    <table>
+        <!-- Table Row -->
+        <tr>
+            <!-- Table Header -->
+            <th>Platz</th>
+            <th>Mannschaft</th>
+            <th>Torverhältnis</th>
+            <th>Punkte</th>
+        </tr>
+        <tr>
+            <!-- Table Data -->
+            <td>1</td>
+            <td class="team">Portugal</td>
+            <td>13:3</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <!-- Table Data -->
+            <td>2</td>
+            <td class="team">Spanien</td>
+            <td>5:4</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <!-- Table Data -->
+            <td>3</td>
+            <td class="team">Saudi-<br>Arabien</td>
+            <td>2:9</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <!-- Table Data -->
+            <td>4</td>
+            <td class="team">Brazil</td>
+            <td>6:6</td>
+            <td>0</td>
+        </tr>
+    </table>
+
+    </div>        
+    
+</body>
+</html>
+            
+

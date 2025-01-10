@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>ID Selektor</title>
+    <!-- CSS Selektoren sind Muster mit denen wir unsere HTML Elemente stylen können.
+        Dabei gibt es mehrere Ebenen die drei obersten Ebenen sind: 
+
+        Die ID (#id) Ebene, über die man ein einzelnes Element anspricht.
+        Die Class (.class) Ebene, über die man alle Elemente der man diese Klasse zuweist stylen kann.
+        Die Stern (*) Ebene mit der man alle Elemente stylt.
+
+        Wir beschäftigen uns in mit der ID Ebene und gehen danach auf die anderen beiden Ebenen ein.
+        Sobald wir diese beherrschen, gehen wir auf die tieferen Ebenen ein. 
+
+        Wir haben eine dieser tieferen Ebenen sogar bereits verwendet, als wir Links gestylt haben.
+    -->
+    <style>
+
+        /*
+            Um einen ID Selektor zu verwenden, muss man im öffnenden Tag des Elementes das man stylen möchte die ID hinzufügen
+            Das macht man mittels 
+            
+            id="identifikationsname"
+            { 
+            }
+            Dann kann man dieses Element im Style Tag direkt stylen, indem man das # mit dem identifikationsnamen verwendet
+            und dann innerhalb der { } die Eigenschaften verändert.
+
+            WICHTIG: Den ID Selektor verwendet man nur für ein einziges Element.
+            Wenn man mehrere Elemente mit gleichem Style haben will, 
+            verwendet man den Class Selektor, mit dem wir uns in der nächsten Lektion beschäftigen.
+        */
+
+        #absatz1{
+            color:rebeccapurple;
+        }
+        #absatz2{
+            color:palegreen;
+            font-size: 200%;
+        }
+        #ueberschrift1{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="ueberschrift1">ID Selektor</h1>
+
+    <p id="absatz1">
+        Absatz1 mit der einen Farbe purple
+    </p>
+    <p id="absatz2">
+        Absatz2 mit der anderen Farbe green
+    </p>
+</body>
+</html>
+

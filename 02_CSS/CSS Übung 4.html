@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Herausforderung Position</title>
+
+    <!-- Erstelle ein HTML Dokument das folgende Anforderungen Erfüllt:
+    - Ein Hintergrundbild, das die gesamte Fläche einnimmt (egal wie groß das Bild oder der Bildschirm ist) z.B. https://cdn.pixabay.com/photo/2018/03/25/10/01/school-3258934_1280.jpg
+    - Einen Text "Coming Soon" mit 400% Schriftgröße und "...in 15 Days" mit 200% Schriftgröße, welcher zentriert und Weiß in der Mitte angezeigt wird.
+    - Ein kleines Logo mit der Größe von ca 100px Breite, welches oben Links angezeigt wird und mit einem Link zur Startseite hinterlegt ist.
+    -->
+    <style>
+        /* Internal CSS */
+        /* Ein Hintergrundbild, das die gesamte Fläche einnimmt */
+        body {
+            background: url(https://cdn.pixabay.com/photo/2018/03/25/10/01/school-3258934_1280.jpg) no-repeat fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        #mitte {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+
+        }
+
+        p {
+            font-size: 400%;
+            color: white;
+        }
+
+        #smalltext {
+            font-size: 200;
+        }
+
+        #topleft {
+            position: absolute;
+            left: 30px;
+            top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div id="topleft">
+            <img src="https://cdn.pixabay.com/photo/2017/01/31/23/42/animal-2028258_640.png" width="100px" height="100px">
+        </div>
+
+        <div id="mitte">
+            <p>Coming Soon</p>
+            <p id="smalltext">02/02/2025</p>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

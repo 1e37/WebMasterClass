@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Selektoren gruppieren</title>
+    <!-- 
+        Erstelle eine HTML Datei, welche folgenden Bedingungen erfüllt:
+        - Struktur eine HTML Datei
+        - Verwendet einen Tag Selektor (z.B. p Tag) der die Farbe auf Dunkelgrau setzt
+        - Verwendet einen ID Selektor "viereck" welcher ein div 300px breit und 300px hoch macht und ihm einen #b2d3e6 Hintergrund gibt.
+        - Verwendet einen Class Selektor "monogross" der mindestens von zwei Elementen genutzt wird und die Schriftart zu monospace ändert und die Schriftgröße auf 150% setzt.
+        - Besitzt einen Link der den Nutzer auf Google weiterleitet und beim Hovern die Farbe Rot annimmt.
+    -->
+    <style>
+        /* (z.B. p Tag) der die Farbe auf Dunkelgrau setzt */
+        p {
+            color: darkgray;
+        }
+
+        /* ID Selektor "viereck" welcher ein div 300px breit und 300px  */
+        #viereck {
+            width: 300px;
+            height: 300px;
+            background-color: #b2d3e6;
+        }
+
+        /*  Class Selektor Schriftart zu monospace ändert und die Schriftgröße auf 150% */
+        .monogross {
+            font-family: monospace;
+            font-size: 250%;
+        }
+
+        /* einen Link der den Nutzer auf Google weiterleitet und beim Hovern die Farbe Rot annimmt. */
+        a:hover {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Unbetroffene Überschrift</h1>
+
+    <div id="viereck"></div>
+
+    <p class="monogross">Absatz1</p>
+
+
+    <h1 class="monogross">Mono und Groß</h1>
+
+    <p>Absatz2 <a href="https://google.com">google.com</a> </p>
+
+
+</body>
+
+</html>

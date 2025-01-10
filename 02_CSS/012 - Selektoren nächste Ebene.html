@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Selektoren tiefere Ebene</title>
+    <!-- 
+        Selektoren lassen sich aber auch noch weiter detailliert verwenden.
+    -->
+    <style>
+
+        /*
+            Wir können Selektoren auch gruppieren. Dazu haben wir ja bereits das P Tag und das H1 Tag gestylt.
+            Wir können aber auch sowohl alle P Tags als auch alle H1 Tags gleichzeitig stylen, in dem wir sie gruppieren.
+        */
+        
+        /* damit stylen wir nun alle p Tags die sich innerhalb eines div Tags befinden. Alle anderen sind nicht davon betroffen. */
+
+        div p{
+            color:blue;
+        }
+        
+        /* damit stylen wir alle p Tags die direkt nach dem Div Tag kommen */
+        div + p {
+            color: red;
+        }
+
+        /* damit stylen wir alle p Tags die "children" eines div sind. Also quasi direkt auf der Ebene unter dem Div. */
+        div > p {
+            background-color: aquamarine;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div>
+            <h1>Selektoren tiefere Ebene</h1>
+            <p>
+                    Absatz1 innerhalb eines Div
+            </p>
+    </div>
+   
+    <h2>Überschrift die nicht betroffen ist</h2>
+    <p>
+        Absatz2 außerhalb eines Div
+    </p>
+
+    <div>
+            Text im Div
+    </div>
+    <p>
+            Absatz3 direkt hinter einem Div 
+    </p>
+    <!--
+    <div>
+            <span><p> Absatz4 kein children eines Div</p></span>   
+    </div>
+
+    <div>
+            <p> Absatz5  children eines Div</p> 
+    </div>
+    -->
+</body>
+</html>
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Links Stylen</title>
+    <!-- In dieser Lektion lernst du wie man Links stylen kann.
+        
+        Dabei gibt es vier Zustände eines Links zu berücksichtigen
+
+        a:link - ein normaler, unbesuchter Link
+        a:visited - ein Link, den der Benutzer besucht hat.
+        a:hover - ein Link, wenn der Benutzer mit der Maus darüber fährt.
+        a:active - ein Link, sobald er angeklickt wird.
+    
+    -->
+
+    <!-- HERAUSFORDERUNG 
+    
+        Style die Links so, dass der Text bei einem Besuchten Link eine Hintergrundfarbe deiner Wahl hat
+        Style die Links so, dass beim Hovern, der Link eine Hintergrundfarbe von grün bekommt.
+        Style die Links so, dass ein angeklickter Link eine Margin von 200 px bekommt.
+    
+    -->
+    <style>
+        
+        /* Unbesuchter Link */
+        a:link {
+            color: rgb(0, 0, 0);
+        }
+
+        /* besuchter Link */
+        a:visited {
+            color: red;
+            background-color:yellow; 
+        }
+
+        /* Maus aktuell über dem Link */
+        a:hover {
+            color: rgb(28, 244, 4);
+             color: green; 
+        }
+   
+        /* angeklickter Link */
+        a:active {
+            color: tomato;
+             margin: 200px; 
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Links stylen</h1>
+    <a href="https://fast.com"> fast1 </a>
+    <a href="https://fast.com"> fast2 </a>
+    <br>
+    <p>
+        Absatz unter dem Link Container
+    </p>
+</body>
+</html>
+

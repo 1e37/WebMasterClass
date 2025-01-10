@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Margin Padding Border</title>
+
+    <!-- Bild welches die einzelnen Begriffe ideal darstellt: https://upload.wikimedia.org/wikipedia/commons/b/b2/CSS-Box-Modell.png -->
+
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+
+        #aussen{
+            margin: 10px;
+            background-color: red;
+            width: 300px;
+            height: 300px;
+            border: 5px solid black;
+            padding:10px;
+            /* Alternative: padding: 10 10 10 10; - oben, rechts, unten links.
+                oder:
+                padding-top: 10px;
+                padding-right: 10px;
+                padding-bottom: 10px;
+                padding-left: 10px;
+                Die Werte können natürlich individuell gestalltet werden.
+
+                Wenn die Eigenschaft padding drei Werte hat:
+
+                Polsterung/Padding: 10px 20px 30px;
+                die obere Padding beträgt 10px
+                rechte und linke Padding sind 20px
+                die untere Padding ist 30px
+
+                Wenn die Eigenschaft padding zwei Werte hat:
+
+                Padding: 10px 20x;
+                Die oberen und unteren Paddings sind 10px.
+                rechte und linke Padding sind 20px
+
+                Die gleichen prinzipien gelten für margin.
+
+                margin-top: 300px;
+                margin-bottom: 200px;
+                margin-right: 100px;
+                margin-left: 180px;
+                und die anderen Optionen sind auch möglich.
+            */
+
+            /* gesamtbreite der eingenommenen länge ist 300 + 5 + 10 + 10 px.
+                Also width + padding + border + margin
+                Margin ist der Außenabstand
+                Padding der Innenabstand
+                Border der Rahmen.
+            */
+
+        }
+        #innen{
+            background-color: green;
+            width: 290px;
+            height: 290px;
+            border: 5px solid grey;
+            
+        }
+        #drunter{
+            background-color: red;
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            
+            border: 5px solid black;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="aussen">
+        <div id="innen">
+            
+        </div>
+    </div>
+    <div id="drunter">
+
+    </div>
+</body>
+</html>
+

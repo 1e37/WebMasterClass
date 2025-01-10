@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Tabellen stylen</title>
+
+
+    <style>
+            table {
+                /* Damit sorgen wir dafür, dass die Rahmen der aneinanderstehenden Zellen zusammengeführt werden soll */
+                border-collapse: collapse;
+                /* Die Tabelle soll über die gesamte Breite gehen */
+                width: 100%;
+            }
+
+            /* TableHeader, TableData */
+            th, td {
+                
+                text-align: left; /* sorgt dafür, dass der Text sich nach links orientiert */
+                padding: 15px;
+            }
+            /* 
+                Wir verwenden hier ein Konzept der erweiterten Selektoren. Und zwar sagen wir:
+                Für Table Rows (Tabellen Reihen), möchten wir für das n-te Kindelement (welches eine gerade Zahl ist) den folgenden style: leichtes grau.
+            */
+            tr:nth-child(even){
+                background-color: #f2f2f2
+            }
+            
+            th {
+                background-color: palevioletred;
+                color: white;
+            }
+            </style>
+</head>
+<body>
+            
+    <h2>Tabellen stylen</h2>
+    
+    <table>
+        <tr>
+            <th>Vorname</th>
+            <th>Nachname</th>
+            <th>Punktzahl</th>
+        </tr>
+        <tr>
+            <td>Max</td>
+            <td>Mustermann</td>
+            <td>3020</td>
+        </tr>
+        <tr>
+            <td>Frank</td>
+            <td>Richter</td>
+            <td>2366</td>
+        </tr>
+        <tr>
+            <td>Johanna</td>
+            <td>Weiß</td>
+            <td>3200</td>
+        </tr>
+        <tr>
+            <td>Michael</td>
+            <td>Maier</td>
+            <td>3130</td>
+        </tr>
+    </table>
+            
+</body>
+</html>
+            
+
