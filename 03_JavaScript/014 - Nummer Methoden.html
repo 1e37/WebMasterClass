@@ -1,0 +1,36 @@
+<!Doctype html>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nummer Methoden Javascript</title>
+
+</head>
+<body>
+   
+    <script type="text/javascript">
+        var zahl = 3.1415;
+        document.write(zahl.toExponential(2));
+        document.write(zahl.toExponential(3));
+        document.write(zahl.toExponential(4));
+        
+        // Rundet
+        document.write(zahl.toFixed(2));
+        document.write(zahl.toFixed(0));
+        
+        // Rundet und schneidet den Wert ab
+        document.write(zahl.toPrecision(0));
+        document.write(zahl.toPrecision(2));
+        document.write(zahl.toPrecision(3));
+
+        Number(true);       // gibt 1 zurück
+        Number(false);      // gibt 0 zurück
+        Number("5");        // gibt 5 zurück
+        Number(" 5");       // gibt 5 zurück
+        Number(" 5   ");    // gibt 5 zurück
+        Number(" 5.123");   // gibt 5.123 zurück
+        Number("13,5");     // gibt NaN - Not a Number - Keine Zahl zurück
+        Number("Frank");    // gibt NaN - Not a Number - Keine Zahl zurück
+    </script>
+</body>
+</html>

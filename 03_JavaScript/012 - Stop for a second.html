@@ -1,0 +1,57 @@
+<!Doctype html>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Schleife in Javascript</title>
+
+</head>
+<body>
+
+	<h1 id="top">0</h1>
+	<button onclick="startFunction()">Starten</button>
+
+	<button onclick="stopFunction()">Anhalten</button>
+    <script type="text/javascript">
+		
+		var secCounter = 0;
+		function increaseSecond(){
+			secCounter++;
+			document.getElementById("top").innerHTML = secCounter;
+		}
+		
+		var myInterval = setInterval(increaseSecond, 1000);
+		function startFunction() {
+			myInterval.start();
+		}
+		
+		function stopFunction(){
+			clearInterval(myInterval);
+		}
+		
+		/*
+        var check = function(){
+			if(condition){
+				// run when condition is met
+			}
+			else {
+				setTimeout(check, 1000); // check again in a second
+			}
+		}
+		*/
+
+		//check();
+		
+		
+		/*
+		
+		var wait = setTimeout(function (){
+
+		  document.write("Zeit ist rum");
+			
+		}, 10000); // How long do you want the delay to be (in milliseconds)? 
+		
+		*/
+    </script>
+</body>
+</html>

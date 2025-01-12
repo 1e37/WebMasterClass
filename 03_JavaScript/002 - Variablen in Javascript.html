@@ -1,0 +1,37 @@
+<!Doctype html>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+    <style>
+        button{
+            margin:20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="top">Schüler: 0</h1>
+    <button type="button" id="mybutton">Erhöhen</button>
+    <button type="button" id="reset">Zurücksetzen</button>
+    <script>
+        var name = "Test";
+        var nachname;
+        var anzahl = 0;
+
+        document.getElementById("mybutton").onclick = function(){
+            // anzahl = anzahl + 1;
+            // anzahl++;  inkrementieren
+            anzahl += 1;
+            document.getElementById("top").innerHTML = "Schüler: " + anzahl;
+        }
+
+        // Overwrite the id "top" with a new string
+        document.getElementById("reset").onclick = function(){
+            anzahl = 0;
+            document.getElementById("top").innerHTML = "Schüler: " + anzahl;
+
+        }
+    </script>
+</body>
+</html>

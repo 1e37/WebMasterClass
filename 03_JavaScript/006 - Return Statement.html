@@ -1,0 +1,43 @@
+<!Doctype html>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Return Statement in Javascript</title>
+
+</head>
+<body>
+    <script type="text/javascript">
+        /* Wenn JavaScript eine Return-Anweisung erreicht, stoppt die Funktion die Ausführung.
+        Wenn die Funktion aus einer Anweisung aufgerufen wurde, 
+        wird JavaScript "zurückkehren", 
+        um den Code nach der aufrufenden Anweisung auszuführen.
+        Funktionen berechnen oft einen Rückgabewert.
+        Der Rückgabewert wird "zurückgegeben" an den "Anrufer":
+        */
+
+        /* Hierbei verwenden wir die Funktion also dazu 
+        "Ich bin ein Return" auszugeben.
+        Das kommt daher, dass unsere Funktion derReturn als 
+        Rückgabewert "Ich bin ein Return" hat. 
+        Dh wenn die Funktion aufgerufen wird, 
+        kann man das so sehen als wäre das 
+        gleichbedeutend mit "Ich bin ein Return".
+        */
+    
+        function derReturn(){
+            /* return steht für zurückgeben */
+            return "Ich bin ein Return";
+        }
+        document.write(derReturn());
+
+        function derReturn2(){
+        var person, name="Denis", alter=25;
+        person = name + " " + alter;
+            return person;
+        }
+
+        document.write(derReturn2());
+    </script>
+</body>
+</html>

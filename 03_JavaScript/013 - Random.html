@@ -1,0 +1,35 @@
+<!Doctype html>
+<html lang="de-DE">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Funktionen in Javascript</title>
+    <style>
+        #square {
+            height: 300px;
+            width: 300px;
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="top">Klicke auf den Button um eine zufällige Zahl zu erhalten</h1>
+    <button id="meinButton">Klick mich!</button>
+    <div id="square"></div>
+    <button onclick="randomColor()">Zufall</button>
+    <script type="text/javascript">
+        var zufallszahl;
+        document.getElementById("meinButton").onclick = function () {
+            zufallszahl = Math.floor(Math.random() * 10);
+            document.getElementById("top").innerHTML = "Die zufällige Zahl ist: " + zufallszahl;
+        }
+
+        function randomColor() {
+            document.getElementById("square").style.backgroundColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+        }
+    </script>
+</body>
+
+</html>

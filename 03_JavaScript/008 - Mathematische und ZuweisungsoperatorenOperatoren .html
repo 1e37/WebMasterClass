@@ -1,0 +1,57 @@
+<!Doctype html>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lokale Variablen in Javascript</title>
+
+</head>
+<body>
+    <script type="text/javascript">
+        var ergebnis;
+
+        // Addieren
+        ergebnis = 5+3;
+
+        // Subtrahieren
+        ergebnis = 3-5;
+
+        // Multiplizieren
+        ergebnis = 5*3;
+
+        // Dividieren
+        ergebnis = 9/3;
+
+        //Jedoch gibt es noch drei weitere wichtige //Operatoren:
+
+        // Modulo - Im Deutschen auch als Rest bekannt
+        ergebnis = 13/3;
+
+        //Inkrementieren - erhöht ergebnis um 1
+        ergebnis++;
+
+        // Dekrementieren - verringert ergebnis um 1
+        ergebnis--;
+                
+        var ergebnis=3;
+        ++ergebnis; // erhöht ergebnis um 1
+        document.write(ergebnis); // gibt 4 aus
+        document.write(++ergebnis); // gibt 5 aus da wir vor der Ausgabe erhöhen
+        document.write(ergebnis); // gibt 5 aus
+        document.write(ergebnis++); // gibt 5 aus da wir nach der Ausgabe erhöhen
+        document.write(ergebnis); // gibt 6 aus
+
+        ergebnis = ergebnis - 3;
+        document.write(ergebnis); // gibt 3 aus da 6-3 = 3
+
+        ergebnis += 5; // wir addieren 5 zu ergebnis hinzu
+        document.write(ergebnis); // gibt 8 aus
+        ergebnis -= 4; // wir subtrahieren 4 zu ergebnis hinzu
+        document.write(ergebnis); // gibt 4 aus
+        ergebnis *= 2; // wir multiplizieren ergebnis mit 4
+        document.write(ergebnis); // gibt 8 aus
+        ergebnis /= 4; // wir dividieren ergebnis mit 4
+        document.write(ergebnis); // gibt 2 aus
+    </script>
+</body>
+</html>

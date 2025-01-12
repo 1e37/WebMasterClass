@@ -1,0 +1,49 @@
+<!Doctype html>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+    <!-- 
+    Wir können unser Javascript im Head oder im Body (unten) einfügen.
+    Der Vorteil es im Body unten zu machen, ist dass die Seite dadurch etwas schneller lädt,
+    weil das Javascript nicht kompiliert werden muss, bevor der Browser die ersten Infos darstellt.
+    Wir umgeben unseren Javascript Code mit dem <script> Tag.
+    <script>
+        function myFunction() {
+           document.getElementById("top").innerHTML = "Überschrift verändert.";
+        }
+    </script>
+    -->
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1 id="top">Javascript Datentypen</h1>
+    <!-- Wir geben dem Button eine Id, damit wir ihn via Javascript ansprechen können.-->
+    <button id="meinButton">Klick mich!</button>
+    <script>
+        
+        var anzahlKlicks = 0;
+        var name = "Test";
+        var textZahl = "5"; // ACHTUNG - Dies ist keine Zahl im Sinne des Datentypen.
+        var sonnescheint = true; // oder false, oder null (also leer)
+
+        // Mit typeof erhalten wir den Datentypen. Das wird vorallem nützlich,
+        // wenn wir daten übergeben bekommen und sicherstellen müssen,
+        // dass sie einem Datentypen entsprechen, damit wir mit ihnen Arbeiten können.
+        typeof anzahlKlicks;
+        typeof name;
+        typeof textZahl;
+        typeof sonnescheint;
+
+       
+        document.getElementById("meinButton").onclick = function(){
+            anzahlKlicks += 1;
+           // document.getElementById("top").innerHTML = "Überschrift verändert.";
+           document.getElementById("top").innerHTML = "Anzahl Klicks: " + anzahlKlicks;
+        }
+    </script>
+</body>
+</html>

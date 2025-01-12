@@ -1,0 +1,65 @@
+<!Doctype html>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays in Javascript</title>
+
+</head>
+<body>
+    <button onclick="geklickt()">NICHT KLICKEN</button>
+    <script>
+        /*
+        Funktionen sind eine Art Miniprogramm, 
+        das wir nachdem wir es erstellt haben, 
+        jederzeit wieder verwenden können. 
+        Wenn ihr auf eurem Handy z.B. den Homebutton drück,
+         wird eine Funktion aufgerufen die euch zurück zu eurem Homescreen bringt. 
+         Solche Funktionen machen einem die Arbeit wirklich leichter, 
+         da man sie dazu verwenden kann,
+         etwas durchzuführen was wir mehrfach durchführen wollen.
+        */
+
+        // Anlegen einer Funktion
+        function geklickt(){
+            alert("Hallo!");
+        }
+
+        /*
+        Definition für Parameter
+        Parameter (deutsch) auch Übergabewert genannt 
+        sind in der Informatik Variablen, über die ein 
+        Computerprogramm oder Unterprogramm, für einen Aufruf gültig, 
+        auf bestimmte Werte ?eingestellt? werden kann. 
+        Diese Einstellungen werden bei der Verarbeitung 
+        berücksichtigt und beeinflussen damit meist auch die 
+        Ergebnisse des Programms. Parameter sind also programmextern gesetzte Einflussfaktoren.
+
+        */
+
+        // Anlegen einer Funktion mit einem Parameter
+        function funktionsName(uebergabeWert){
+		alert("Der Inhalt " + uebergabeWert);
+        }
+        funktionsName("juckt mich kaum!");
+        funktionsName(42);
+
+        // Anlegen einer Funktion mit zwei Parametern
+        function liebesTest(name1, name2){
+		var punkte;
+		punkte=(name1+name2).length();
+		document.write(name1 + " und " +name2 + " haben " + punkte + " Punkte");
+        }
+
+        // Aufrufen der Funktion
+        liebesTest("Kaffee", "Kuchen");
+
+        // Beispiel mit Zahlen
+        function funktionsName(parameter1, parameter2, parameter3){
+		document.write(parameter1+parameter2+parameter3);
+		document.write(parameter1);
+        }
+        funktionsName(2,5,7);
+    </script>
+</body>
+</html>

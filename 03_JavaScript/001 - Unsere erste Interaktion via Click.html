@@ -1,0 +1,47 @@
+<!Doctype html>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+    <style>
+
+        button{
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Mein Javascript</h1>
+    <!-- Hier verwenden wir einen Button. Dazu nutzen wir das Button Tag und verwenden das onclick Attribut um unser Javascript einzufügen.
+        Das funktioniert zwar, ist jedoch nicht zu empfehlen, weil es unseren Code schnell unübersichtlich macht.
+        Wir werden noch andere Möglichkeiten kennenlernen Javascript zu verwenden.
+
+        mit alert() rufen wir die alert Funktion auf, welche einen Hinweis an den Nutzer schickt. 
+        Das ist unter normalen Umständen keine zu empfehlende Herangehensweise, für unsere Zweck hier, ist es jedoch super um zu sehen, dass etwas passiert.
+        Der Inhalt der sich innerhalb der Klammern der alert() Funktion befindet, gibt unser Browser aus, sobald dieses Event ausgeführt wird.
+
+        ACHTUNG: wir verwenden hier Apostrophe, weil wir uns bereits innerhalb der Anführungsstriche befinden.
+        Der Inhalt des Button Tags ist einfach der Text der auf dem Button angezeigt wird. In diesem Fall: Klick mich.
+    -->
+    <button type="button" onclick="alert('Hat geklappt');">Klick mich</button>
+
+    <!-- beispiel eines anderen buttons anhand von ausgelagertem JS -->
+
+    <h2 id="h2text">Dieser Text kann sich ändern</h2>
+    <button type="button" id="changetext">ASDF Button</button>
+
+    <script>
+        // Heare apply JS Rules
+
+        document.getElementById('changetext').onclick = function()
+        {
+            // change heare the h2 by id aswell
+            document.getElementById('h2text').innerHTML = 'ASDF'; // Use assignment instead of function call
+
+        }
+
+    </script>
+</body>
+</html>

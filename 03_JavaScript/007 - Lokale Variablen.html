@@ -1,0 +1,25 @@
+<!Doctype html>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lokale Variablen in Javascript</title>
+
+</head>
+<body>
+    <script type="text/javascript">
+        /* Variablen, die innerhalb einer JavaScript-Funktion deklariert wurden,
+         werden zu LOKAL für die Funktion.
+        Auf lokale Variablen kann nur innerhalb der Funktion zugegriffen werden.
+        */
+        
+        // Code hier (außerhalb der Funktion) kann die lokale Variable "alter" NICHT verwenden
+        function dieFunction(){
+            var alter = 30;
+            // Code hier kann die Variable verwenden.
+        }
+        // Code hier (außerhalb der Funktion) kann die lokale Variable "alter" NICHT verwenden
+        
+    </script>
+</body>
+</html>

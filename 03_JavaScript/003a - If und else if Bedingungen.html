@@ -1,0 +1,41 @@
+<!Doctype html>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>if und else if Bedingungen</title>
+</head>
+<body>
+    <h1 id="text">Du bist noch so jung...</h1>
+    <button id="meinButton">Klick mich!</button>
+    <script>
+        var alter = 15;
+		
+        document.getElementById("meinButton").onclick = function(){
+            // Mit if (falls) testen wir, ob die Bedingung in den Klammern wahr oder falsch ist.
+            // Ist sie wahr, wird der Codeblock der If Anweisung ausgeführt. Also der Code in den {}
+            if (alter < 16){
+                document.getElementById("text").innerHTML = "Du bist " + alter + " Du darfst bis 22 Uhr raus";
+            // Falls die vorherige Bedingung nicht erfüllt wurde, wird mit else if, die nächste Bedingung überprüft
+            // Ist sie wahr, wird der Codeblock der Else If Anweisung ausgeführt. Also der Code in den {}
+            }else if (alter <18){
+                document.getElementById("text").innerHTML = "Du bist " + alter + " Du darfst bis 22 Uhr raus";
+            // Falls keine der vorherigen Bedingungen erfüllt wurde, wir der "else" Block ausgeführt.
+            // Also der Code der sich in den {} nach dem else befindet.
+            }else{
+                document.getElementById("text").innerHTML = "Du bist " + alter + " mach was du willst";
+            }
+            // WICHTIG: 
+            // Der Die else if und else Abfragen werden nur überprüft, falls die vorherige Bedingung nicht erfüllt wurde.
+            // Falls sie erfüllt wurde, wird direkt aus der gesamten Anweisung rausgesprungen.
+            // Das geht so lange weiter, bis eine der Bedingungen erfüllt wurde, oder eben der else Block ausgeführt wird.
+
+
+            // hier erhöhen wir einfach alter um eins, wenn jemand auf den Button klickt.
+            alter += 1;
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!Doctype html>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays in Javascript</title>
+
+</head>
+<body>
+    <script>
+        // Ein Array ist eine spezielle Variable, die mehr als einen Wert auf einmal enthalten kann.
+        // Anlegen eines Arrays:
+        // var arrayname = new Array(Inhalt Position/Index 0, Inhalt Position/Index 1, ...);
+        var zahlenArray = new Array(0,1,2,3,4,5,6,7,8,9);
+        var namenArray = new Array("Denis", "Steffie", "Hans");
+
+        document.write(zahlenArray[3] + namenArray[1]);
+
+        // hier legen wir fest, dass der Array vier Variablen beinhalten kann.
+        var mitbewohner = new Array(4);
+        // hier weisen wir den Positionen des Arrays Werte zu.
+        mitbewohner[0] = "2Pac";
+        mitbewohner[1] = "Eminem";
+        mitbewohner[2] = "Superman";
+        mitbewohner[3] = "Spiderman";
+        
+        document.write(mitbewohner[0]);
+        document.write(mitbewohner);
+
+        // Man muss einem Array aber nicht unbedingt seine länge zuweisen.
+        var produkte = new Array();
+        /*
+            mehr Code
+        */
+        produkte[0] = "Galaxy S1";
+        /*
+            mehr Code
+        */
+        produkte[1] = "Galaxy S2";
+        produkte[2] = "Galaxy S3";
+        /*
+            mehr Code
+        */
+        produkte[3] = "Galaxy S4";
+
+        document.write(produkte[1]);
+    </script>
+</body>
+</html>

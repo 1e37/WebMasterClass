@@ -1,0 +1,48 @@
+<!Doctype html>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Funktionen in Javascript</title>
+
+</head>
+<body>
+    <p id="bsp"></p>
+
+    <script type="text/javascript">
+
+        var autoMarken = ["Audi", "BMW", "VW", "Mercedes"];
+        // Gibt den Array als Text/String aus.
+        document.getElementById("bsp").innerHTML = autoMarken.toString();
+        // Fügt die einzelnen Elemente des Arrays mit einem Stern umgeben von Leerzeichen zusammen.
+        document.getElementById("bsp").innerHTML = autoMarken.join(" * ");
+        // löscht das letzte Element im Array
+        autoMarken.pop();   
+        var eine = autoMarken.pop();      // der Wert von x ist VW (Mercedes war ja schon weg.)
+        // Fügt ein Element zum Array hinzu
+        autoMarken.push("Porsche");  
+        // Löscht das erste Element raus
+        autoMarken.shift();  
+        // Löscht das erste Element raus und speichert es in der Variable "erste"
+        var erste = autoMarken.shift();
+        // Fügt das Element am Anfang des Arrays ein.
+        autoMarken.unshift("Opel");
+        /* splice(anWelchemIndexSollenElementeHinzugefügtWerden, 
+         WieVieleElementeAnDieserPositionGelöschtWerden, "ELEMENT1", "ELEMENT2", ... , "ELEMENTN")
+        */
+        autoMarken.splice(2,0,"Bughatti","Skoda")
+
+        var handyMarken = ["Samsung", "Huawei", "Apple"];
+        var fernseherMarken = ["LG", "Telefunken"]
+        // concat() vereint zwei bis n Arrays und erzeugt daraus einen neuen.
+        var marken = autoMarken.concat(handyMarken, fernseherMarken);
+        // slice(n) schneidet ein Element an Position n aus dem Array und gibt diesen zurück.
+        var eineMarke = marken.slice(3);
+
+        // Sortiert die Elemente des Arrays marken
+        marken.sort();
+        // kehrt die Ordnung um
+        marken.reverse();
+    </script>
+</body>
+</html>

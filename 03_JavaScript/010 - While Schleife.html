@@ -1,0 +1,67 @@
+<!Doctype html>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do While Schleifen in Javascript</title>
+
+</head>
+<body>
+    <script type="text/javascript">
+
+        var anzahlAnEintraegen = 0;
+        var gesamtWert = 0;
+        var input = "";
+        while(input != "0"){
+            input = prompt("Nächste Zahl bitte!");
+            inputAlsZahl = parseInt(input);
+            console.log("InputalsZahl: " + inputAlsZahl);
+            if(inputAlsZahl != 0 ){
+                gesamtWert += parseInt(input);
+                console.log("Gesamtwert: " +gesamtWert);
+                anzahlAnEintraegen++;
+                console.log("Anzahl: " + anzahlAnEintraegen);
+            }
+        }
+        var ergebnis = gesamtWert/anzahlAnEintraegen;
+        document.write("Durschnitt ist " + ergebnis);
+        
+        /*
+        var input = prompt("Bitte trage 1 ein!");
+        while(input != "1"){
+            input = prompt("BITTE GIB 1 ein um zu beenden!");
+        }
+        document.write("DANKE");
+        */
+
+
+        /*123
+        var zaehler = 0;
+        while(zaehler <10){
+            document.write("<br> Zaehlerwert ist: " + zaehler);
+            zaehler++;
+        }
+        document.write("Nach der While Schleife");
+
+        var zaehler = 5;
+        do{
+            document.write("<br> Zaehlerwert ist: " + zaehler);
+            zaehler--;
+        }while(zaehler >=10);
+        document.write("<br> FERTIG MIT DER SCHLEIFE!");
+        */
+
+        /*
+            In diesem Fall ist der Ausgangswert 0 und unsere 
+            While Schleife soll so lange erneut aufgerufen werden 
+            (ihr Codeblock also das was sich in {} befindet), 
+            bis der Zähler kleiner als 10 also 9 ist. 
+            So lange soll Text ausgegeben und die Variable inkrementiert werden. 
+            Wir sehen, dass uns diese wenigen Zeilen Code 
+            ganz schön viel Arbeit gespart haben. 
+            Sonst hätten wir nämlich 10 mal den Code schreiben/kopieren müssen.
+        */ 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!Doctype html>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do While Schleifen in Javascript</title>
+
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+            "Eine Schleife ist eine Kontrollstruktur in Programmiersprachen. 
+            Sie wiederholt einen Anweisungs-Block den sogenannten 
+            Schleifenrumpf oder Schleifenkörper solange die Schleifenbedingung 
+            als Laufbedingung gültig bleibt bzw. 
+            als Abbruchbedingung nicht eintritt. 
+            Schleifen, deren Schleifenbedingung immer zur 
+            Fortsetzung führt oder die keine Schleifenbedingung haben, 
+            sind Endlosschleifen.
+
+            Schleifen können beliebig verschachtelt werden: 
+            Innerhalb des Schleifenkörpers der äußeren 
+            Schleife befindet sich wiederum eine Schleife, 
+            sie liegt innen, oder unter der äußeren Schleife. 
+            Jede Schleife kann in eine rekursive oder sogar 
+            endrekursive Form umgewandelt werden. 
+            Zur Beschleunigung des Programmablaufs werden 
+            Schleifen oft durch den Compiler entrollt."
+        */
+        
+        var zaehlen = 10;
+        do{
+            zaehlen--;
+            document.write("Ich finde dich in " + zaehlen + "! ");
+        }while(zaehlen>=1);  
+        
+        /* Nun fragt ihr euch vielleicht, warum wir die 
+        Schleife bis "zaehlen>=1" wiederholen. 
+        Das liegt daran, dass ein Do While Loop Fußgesteuert ist. 
+        "Bei einer fußgesteuerten Schleife erfolgt die Abfrage der Bedingung, 
+        nachdem der Schleifenrumpf ausgeführt wurde, also am Fuß des Konstruktes. 
+        Wird der Inhalt der logischen Operation nicht im Schleifenrumpf verändert, 
+        ist diese Kontrollstruktur meist nicht die richtige, 
+        weil diese Schleife sonst genau ein Mal durchlaufen wird oder unendlich lang läuft."
+
+        Mit "nicht verändert" ist hier gemeint, 
+        wenn die Variable die in den Klammern hinter while steht nicht 
+        verändert wird und somit die while Bedingung nie erreicht wird.
+        */
+         
+    </script>
+</body>
+</html>

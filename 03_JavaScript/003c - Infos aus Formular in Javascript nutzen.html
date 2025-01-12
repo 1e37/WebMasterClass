@@ -1,0 +1,27 @@
+
+<!Doctype html>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+    <style> </style>
+    
+</head>
+<body>
+    <h1 id="top">getElementById Name und Alter</h1>
+	<input type="text" name="name" id="name" placeholder="Name.." value="" />
+    <input type="number" name="alter" id="alter" placeholder="Alter" value="" />
+    <!-- Wir geben dem Button eine Id, damit wir ihn via Javascript ansprechen können.-->
+    <button id="meinButton">Klick mich!</button>
+    <script>
+        
+        document.getElementById("meinButton").onclick = function(){
+           var name = document.getElementById("name").value;
+           var alter = document.getElementById("alter").value;
+           // document.getElementById("top").innerHTML = "Überschrift verändert.";
+           document.getElementById("top").innerHTML = "Hallo " + name + " du bist " + alter + " Jahre alt";
+        }
+    </script>
+</body>
+</html>

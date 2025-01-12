@@ -1,0 +1,33 @@
+<!Doctype html>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Schleife in Javascript</title>
+
+</head>
+<body>
+    <script type="text/javascript">
+
+        /*                              (kondition)
+            for(variable=anfangswert; variable<endwert; variable zählschritte){
+                // auszuführender Code
+            }
+        */
+
+        for(zaehler=0; zaehler<10; zaehler++){
+            document.write(zaehler);
+        }
+
+        // Durchlaufen der Inhalte eines Arrays:
+        var freunde = ["Frank", "Michi", "Maria"];
+        var len = freunde.length;
+        var text = "";
+        for (i=0; i < len; i++) { 
+            text += freunde[i] + "<br>";
+        }
+        document.write(text)
+
+    </script>
+</body>
+</html>
