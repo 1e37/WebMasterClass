@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8"><!-- Umlaute und Sonderzeichen-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Shop</title>
+    <link rel="stylesheet" href="style.css"> <!-- Internal CSS file -->
+    <script src="./code.js"></script>
+</head>
+
+<body>
+
+    <header>
+
+        <!-- Header Text -->
+        <h1>100% BEST Pizza in Town!</h1>
+        <ul class="navbar">
+            <li>Home</li>
+            <li>Menu</li>
+            <li>About Us</li>
+            <li>Contact</li>
+        </ul>
+
+        <!-- Some iframe -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.2080234683795!2d-73.96543268386965!3d40.7794406414224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25896f660c26f%3A0x3b2fa4f4b6c6a1fa!2sThe%20Metropolitan%20Museum%20of%20Art!5e0!3m2!1sen!2sus!4v1630602971236!5m2!1sen!2sus"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+
+    </header>
+
+
+    <main>
+
+        <div>
+            <h1>Welcome to Our Pizza Shop!</h1>
+            <div class="menu">
+
+                <div class="pizza-item">
+
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.labottegatimisoara.ro%2Fwp-content%2Fuploads%2F2022%2F10%2Fpizza-margherita-fresca-1-1.jpg&f=1&nofb=1&ipt=260c3f5789f94409c1229814d9eda030d15bbcdbaf1a6ea7ef00d08d78dbae64&ipo=images"
+                        alt="Margherita Pizza">
+                    <h3>Margherita Pizza</h3>
+                    <p>Classic pizza with fresh mozzarella, tomatoes, and basil.</p>
+                    <p class="price" data-price="12.99">12.99€</p>
+                    <input type="number" min="0" placeholder="Quantity" class="quantity">
+
+                </div>
+
+                <div class="pizza-item">
+
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.butac.it%2Fwp-content%2Fuploads%2F2015%2F09%2FPepperoni-Pizza-Slice-1068x715.jpg&f=1&nofb=1&ipt=d8da0884346bf8085ffb94202d104fe3a411c9456676b340b28c0c4aeb11afbd&ipo=imagesbv"
+                        alt="Pepperoni Pizza">
+                    <h3>Pepperoni Pizza</h3>
+                    <p>Loaded with pepperoni and mozzarella cheese.</p>
+                    <p class="price" data-price="14.99">14.99€</p>
+                    <input type="number" min="0" placeholder="Quantity" class="quantity">
+
+                </div>
+
+                <div class="pizza-item">
+
+                    <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.createnourishlove.com%2Fwp-content%2Fuploads%2F2015%2F02%2FIMG_2808.jpg&f=1&nofb=1&ipt=c160d04b961e00ddb1d22e2b5950aad74c71b7b8c4b4eb0339fbac9916c319df&ipo=images"
+                        alt="Veggie Pizza">
+                    <h3>Veggie Pizza</h3>
+                    <p>Fresh vegetables topped with mozzarella cheese.</p>
+                    <p class="price" data-price="13.99">13.99€</p>
+                    <input type="number" min="0" placeholder="Quantity" class="quantity">
+
+                </div>
+            </div>
+
+
+            <div class="checkout">
+
+                <button id="checkoutButton">Checkout</button>
+                <h2>Order Summary:</h2>
+                <div id="orderSummary"></div>
+                <h3 id="totalPrice"></h3>
+
+            </div>
+        </div>
+        </div>
+
+    </main>
+
+    <footer id="footer">
+
+        <p>&copy; 2025 - The Pizza Company</p>
+
+        <p>Contact: <a href="mailto:info@pizzacompany.com">info@pizzacompany.com</a></p>
+
+    </footer>
+    <script>
+        /* Add an event listener to the "Checkout" button
+        We create an anonymous function which will handle the request.
+        */
+        document.getElementById('checkoutButton').addEventListener('click', function () {
+            // Select all pizza items from the menu
+            const pizzas = document.querySelectorAll('.pizza-item');
+
+            // Initialize an empty string for the order summary
+            let orderSummary = '';
+
+            // Initialize a variable to keep track of the total price
+            let totalPrice = 0;
+
+            // Loop through each pizza item
+            pizzas.forEach(pizza => {
+                // Get the quantity entered by the user for this pizza
+                const quantity = pizza.querySelector('.quantity').value;
+
+                // Get the price of the pizza from the data-price attribute
+                const price = parseFloat(pizza.querySelector('.price').getAttribute('data-price'));
+
+                // Check if the quantity is greater than zero (the user wants to order this pizza)
+                if (quantity > 0) {
+                    // Calculate the total price for this pizza (price * quantity)
+                    const itemTotal = price * quantity;
+
+                    // Add the item total to the overall total price
+                    totalPrice += itemTotal;
+
+                    // Append - add new string to existing string (+=) 
+                    // the pizza name, quantity, individual price, and item total to the order summary
+                    orderSummary += `${pizza.querySelector('h3').innerText}: ${quantity} x €${price.toFixed(2)} = €${itemTotal.toFixed(2)}<br>`;
+                }
+            });
+
+            // Update the order summary display message with the constructed summary
+            // or show a message if no items were selected, but the button clicked
+            document.getElementById('orderSummary').innerHTML = orderSummary || 'No items selected.';
+
+            // Update the total price display.
+            // If the total price is greater than zero, display it formatted to two decimal places.
+            // If the total price is zero or less, the display will be empty (not shown).
+            document.getElementById('totalPrice').innerText = totalPrice > 0 ? `Total Price: €${totalPrice.toFixed(2)}` : '';
+        });
+    </script>
+
+</body>
+
+</html>

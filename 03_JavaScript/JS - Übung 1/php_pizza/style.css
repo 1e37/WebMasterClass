@@ -1,0 +1,126 @@
+header {
+    /* Background color for the header */
+    background-color: rgb(226, 116, 43); 
+    /* Add some padding */
+    padding: 10px; 
+
+    /* flexbox to make the allignment in a single column*/
+    display: flex; 
+    flex-direction: column; 
+
+    /* Center items horizontally */
+    align-items: center; 
+
+}
+
+.navbar {
+
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox to arrange items horizontally */
+
+}
+
+
+.navbar li {
+
+    padding: 10px 20px; /* Add padding to list items */
+    color: white; /* Text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+
+}
+
+/* Add hover effect to the list items inside the navbar */
+.navbar li:hover {
+
+    background-color: rgba(207, 14, 14, 0.2); 
+
+}
+
+/* Style body element*/
+body {
+
+    font-family: Arial, sans-serif;
+    background-color: #412d2d;
+
+}
+/* Style all h1 elements*/
+h1 {
+    color: white; 
+    /* Center text within the h1 */
+    text-align: center; 
+
+}
+
+
+
+/* Style menu class*/
+.menu {
+
+    display: flex;
+/* Allow flex items to wrap onto multiple lines if necessary */
+ /* Items will wrap to the next line if they exceed the container's width */
+    flex-wrap: wrap;
+    /* Distribute space evenly around the flex items */
+
+    /* Items will be spaced evenly with equal space around them */
+    justify-content: space-around; 
+
+
+
+}
+
+/* Style pizza item class*/
+.pizza-item {
+
+    background-color: #fff;
+    border: 1px solid #c80f44;
+    
+    /* Round borders */
+    border-radius: 8px;
+
+    /* space outside an elements border */
+    margin: 10px;
+    /* space between an elements content and its border  */
+    padding: 15px;
+    text-align: center;
+    width: 250px;
+
+}
+
+/* targeting the img tag, which parent is pizza-item*/
+.pizza-item img {
+    width: 100%;
+    /* Round borders */
+    border-radius: 8px;
+
+}
+
+/* targeting the h3 tag, which parent is pizza-item*/
+.pizza-item h3 {
+     /* Margin all directions */
+    margin: 10px;
+}
+
+/* targeting the p tag which parent is pizza-item*/
+.pizza-item p {
+    /* Margin all directions */
+    margin: 5px ;
+}
+
+.pizza-item .price {
+
+    font-weight: bold;
+    color: #d9534f;
+
+}
+
+
+
+/* Style footer element*/
+footer{
+
+    background-color: rgb(194, 123, 123);
+
+}

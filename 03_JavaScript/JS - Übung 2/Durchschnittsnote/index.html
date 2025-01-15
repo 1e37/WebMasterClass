@@ -1,0 +1,55 @@
+        <!-- 
+        Eingabe einer Liste von Noten.
+         Berechnung der Durchschnittsnote 
+         Ausgabe der Ergebnisse auf der Webseite -->
+
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8"><!-- Umlaute und Sonderzeichen-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="style.css"> <!-- Internal CSS file -->
+    <script src="./script.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Grade Calculator</h1>
+        <p>Enter your grades in the formular as type of Integer:</p>
+    </header>
+
+    <main>
+        <!-- Main content goes here -->
+
+        <main>
+            <form id="gradeForm">
+
+                <div id="inputsContainer">
+                    <input type="number" id="input0" placeholder="Enter grade" min="1" max="6" required>
+                </div>
+                <button type="button" id="addinput">Add Next Field</button>
+                <button type="submit" id="calculate">Calculate average</button>
+
+            </form>
+
+            <div id="outputContainer">
+
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>&copy; 2025 - The Math Jobs</p>
+            <p>Contact: <a href="mailto:info@mathjob.com">info@mathjob.com</a></p>
+        </footer>
+
+        <script>
+
+        </script>
+
+</body>
+
+</html>
